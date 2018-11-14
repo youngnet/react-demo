@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import api from './api';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+  async componentDidMount() {
+    let res = await api.post('/test/a')
+    console.log('<-  log ->  App -> asynccomponentDidMount -> res', res);
+  }
   render() {
     return (
       <div className="App">
