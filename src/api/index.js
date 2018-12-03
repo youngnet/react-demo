@@ -1,13 +1,10 @@
 import axios from 'axios';
 
 let api = axios.create({
+	baseURL: process.env.NODE_ENV == 'development' ? process.env.BASE_URL : null,
 	timeout: 30000,
 	withCredentials: true
 });
-
-if (process.env.NODE_ENV == 'development') {
-	api.config.baseURL = process.env.BASE_URL;
-}
 
 api.interceptors.response.use(
 	(res) => {
