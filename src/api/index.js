@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { baseURL } from '../config.dev.json';
+
 
 let api = axios.create({
-	baseURL,
+	baseURL: process.env.BASE_URL,
 	timeout: 30000,
 	withCredentials: true
 });
