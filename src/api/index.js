@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let api = axios.create({
-	baseURL: process.env.NODE_ENV == 'development' ? process.env.BASE_URL : null,
+	baseURL: process.env.NODE_ENV == 'development' ? process.env.BASE_URL + '/api' : null,
 	timeout: 30000,
 	withCredentials: true
 });

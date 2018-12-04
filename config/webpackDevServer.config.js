@@ -87,8 +87,9 @@ module.exports = function(proxy, allowedHost) {
     },
     public: allowedHost,
     proxy: {
-      "/": {
+      "/api": {
         target: "http://localhost:2333",
+        pathRewrite: {'^/api' : ''}
       }
     },
     before(app, server) {
