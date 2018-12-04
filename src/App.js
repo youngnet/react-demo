@@ -18,6 +18,7 @@ class App extends Component {
 				<header className='App-header'>哈哈哈Hello</header>
 				<img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1542189491535&di=635341e39cb65dcd0fc82fedaf162705&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2Fc995d143ad4bd1133386207051afa40f4bfb052c.jpg' />
 				<img src={require('./images/Banner.png')} alt='' />
+				<div className='bgcimg' />
 			</div>
 		);
 	}
